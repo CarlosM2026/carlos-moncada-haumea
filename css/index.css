@@ -1,0 +1,53 @@
+body {
+    color: aqua;
+    background-color: grey
+
+    
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-size: medium;
+    font-weight: 100;
+    color: white;
+
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#About {
+    padding: 20px;
+    margin: 20px;
+    align-self: auto;
+}
+
+#Experience {
+    padding: 20px;
+    margin: 20px;
+}
+
+#Connecting {
+    padding: 20px;
+    margin: 20px;
+}
+
+.Experience-list {
+    font-size: medium;
+    font-weight: 100;
+    color: black;
+}
+
+.Connect-Links {
+    font-size: medium;
+    font-weight: 100;
+    color: black;
+}
