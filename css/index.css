@@ -33,11 +33,14 @@ li {
 #Experience {
     padding: 20px;
     margin: 20px;
+    display: flex; 
 }
 
 #Connecting {
     padding: 20px;
     margin: 20px;
+    display: flex; 
+
 }
 
 .Experience-list {
