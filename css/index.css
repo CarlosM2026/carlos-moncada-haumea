@@ -1,7 +1,6 @@
 body {
     color: aqua;
     background-color: grey
-
     
 }
 
@@ -13,7 +12,6 @@ h2 {
     font-size: medium;
     font-weight: 100;
     color: white;
-
 }
 
 p {
@@ -53,4 +51,53 @@ li {
     font-size: medium;
     font-weight: 100;
     color: black;
+}
+
+
+/* This is for phones */
+@media (min-width:320px) and (max-width:480px) {
+   
+    p {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: grey;
+        
+    }
+
+    h1 {
+        font-family:'Courier New', Courier, monospace;
+        color: black;
+    }
+
+    h2 {
+        font-size: medium;
+        font-weight: 90;
+        color: grey;
+    }
+    
+}
+
+/* This is for things larger than phones */
+@media (min-width:481px) {
+
+    .Experience-list {
+        font-size: medium;
+        font-weight: 90;
+        color: turquoise;
+    }
+
+
+    .Connect-Links {
+        font-size: medium;
+        font-weight: 90;
+        color: turquoise;
+    }
+
+
+    h2 {
+        font-size: medium;
+        font-weight: 90;
+        color: black;
+    }
+    
+
 }
