@@ -34,19 +34,13 @@ for (let i = 0; i < skills.length;i++) {
 const messageForm = document.querySelector("#leave_message_")
 
 
-function getInfo(event) {    //const GetFormInfo = 
+function getInfo(event) {
 
     event.preventDefault();
 
     let name = event.target.usersName.value
     let email = event.target.usersEmail.value
     let message = event.target.usersMessage.value
-
-
-    console.log(name)
-    console.log(email)
-    console.log(message)
-
 
     let messageSection = document.querySelector('#usersMessage_')
 
@@ -56,7 +50,6 @@ function getInfo(event) {    //const GetFormInfo =
 
     newMessage.innerHTML = '<a href="mailto: "' + email + '>' + name + '</a> <span>' + message + '</span>'
 
-    //let removeButton = <button type="button">remove</button>
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.type = "button";
@@ -66,23 +59,47 @@ function getInfo(event) {    //const GetFormInfo =
         entry.remove()
     })
 
-
     newMessage.appendChild(removeButton)
 
     messageList.append(newMessage)
-
-
-
-
-
-    //newMessage.innerHTML('<a href="mailto:' + usersEmail + '">' + usersName + '</a> <span>' + usersMessage + '</span>');
-    //newMessage.appendChild()
-    
 
     messageForm.reset()
 
 }
 
-
-
 messageForm.addEventListener("submit", getInfo);
+
+repositories = []
+
+fetch('https://api.github.com/users/CarlosM2026/repos')
+
+
+.then(function(response) {
+    return response.json()
+}) 
+.then(function(response) {
+    for (let i = 0; i < response.length; i++) {
+        console.log(response[i].name)
+        repositories.push(response[i].name)
+    }
+
+    const projectSection = document.querySelector("#Projects")
+
+    const projectList = projectSection.querySelector('ul')
+
+    console.log(repositories.length)
+
+    for (let i = 0; i < repositories.length; i++) {
+        console.log(repositories[i])
+        let project = document.createElement("li")
+        project.innerText = repositories[i] 
+        projectList.appendChild(project)
+    }
+})
+
+.catch(function(error) {
+    console.log(error)
+})
+
+
+
